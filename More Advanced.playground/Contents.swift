@@ -21,4 +21,13 @@ if let definitelyString = maybeString{
 guard let string = maybeString else {return}
 
 //implicity unwrapped optional
-//Stopped at 10 minutes
+//Try to avoid because if this gets a nil value it will crash when you try and get count
+//Mostly used to integrate with existing Objective C code
+//the ! allows this to be an optional.  Any time you see !, you know you are in dangerous
+//territory so be careful.
+var mostLikelyString: String! = "Hey"
+mostLikelyString.characters.count
+
+
+
+
